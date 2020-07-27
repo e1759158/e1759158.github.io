@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/form.css">
+    <meta name="author" content="LEE Seungjin" />
+    <meta name="keyword" content="html, css, javascript, Whac-A-Mole" />
+    <title>もぐらたたき</title>
+</head>
+
+<body>
+    <header>
+        <h1>もぐらたたき</h1>
+    </header>
+    <div id="home">
+    <p>もぐらたたきゲームです。</p>
+    <button id="button1" type="button" onclick="start(1)">ゲームスタート</button>
+    </div>
+    <div id="gamemode" style="display:none">
+<table>
+    <tr>
+        <th><button type="button" onclick="level(4)">上級<br>レベル</button></th>
+        <td><img id="live1" src="img/live.jpg"><img id="dead1" src="img/dead.jpg"><img id = "bomb1" src="img/bomb.jpg"><img id="boom1" src="img/boom.jpg"></td>
+        <td><img id="live2" src="img/live.jpg"><img id="dead2" src="img/dead.jpg"><img id = "bomb2" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom2"></td>
+        <td><img id="live3" src="img/live.jpg"><img id="dead3" src="img/dead.jpg"><img id = "bomb3" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom3"></td>
+        <th><button type="button" onclick="">スコア<p id="score"></p></button></th>
+    </tr>
+    <tr>
+        <th><button type="button" onclick="level(2)">中級<br>レベル</button></th>
+        <td><img id="live4" src="img/live.jpg"><img id="dead4" src="img/dead.jpg"><img id = "bomb4" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom4"></td>
+        <td><img id="live5" src="img/live.jpg"><img id="dead5" src="img/dead.jpg"><img id = "bomb5" src="img/bomb.jpg"><img src="img/boom.jpg"id="boom5"></td>
+        <td><img id="live6" src="img/live.jpg"><img id="dead6" src="img/dead.jpg"><img id = "bomb6" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom6"></td>
+        <th><button type="button" onclick="">結果確認</button></th>
+    </tr>
+    <tr>
+        <th><button type="button" onclick="level(1)">初級<br>レベル</button></th>
+        <td><img id="live7" src="img/live.jpg"><img id="dead7" src="img/dead.jpg"><img id = "bomb7" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom7"></td>
+        <td><img id="live8" src="img/live.jpg"><img id="dead8" src="img/dead.jpg"><img id = "bomb8" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom8"></td>
+        <td><img id="live9" src="img/live.jpg"><img id="dead9" src="img/dead.jpg"><img id = "bomb9" src="img/bomb.jpg"><img src="img/boom.jpg" id="boom9"></td>
+        <th><button type="button" onclick="home()">最初に<br>戻る</button></th>
+    </tr>
+    </table>
+    <audio id="BGM" src="audio/BGM.mp3" controls loop></audio>
+    <audio id="APPEAR" src="audio/appear.mp3" style="display:none"></audio>
+    <audio id="PUNCH" src="audio/Punch.mp3" style="display:none"></audio>
+    <audio id="BOOM" src="audio/boom.wav" style="display:none"></audio>
+    </div>
+    <footer>
+        Copyright &copy; LEE Seungjin. All Rights Reserved.
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <script src="js/whac.js"></script>
+</body>
+
+</html>
+<!--WEBの画像の全体が一つのゲーム見たいに見えるように工夫した-->

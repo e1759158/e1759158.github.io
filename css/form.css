@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+body{
+    text-align: center;
+    background-color: #EFE4B0;
+}
+header{
+        background-image: url(../img/back.jpg);
+    background-size: 100px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    /*tableの中央配置*/
+}
+
+td{
+    min-width:140px;
+    height:150px;
+    background-image: url(../img/empty.jpg);
+    background-size: 140px;
+/*    表を用いた穴の生成*/
+}
+
+td img{
+    width:140px;
+    height:140px;
+    margin:0 0 0 0;
+}
+
+th button{
+    width:80px;
+    height:150px;
+    background-color: #FFC90D;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+}
