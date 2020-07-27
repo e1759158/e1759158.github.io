@@ -1,9 +1,32 @@
 var r;
 var score = 0;
 var lev;
+var count = 0;
+var bestscore = 0;
+function restart(){
+    $('#home').hide();
+    $('#result').hide();
+    $('#gamemode').show();
+}
+
+function check(){
+    $('#gamemode').hide();
+    $('#result').show();
+}
 
 function start(stnum) {
+        setInterval(function(){
+            count += 1;
+            $('#resultp').append("<p>"+count+"回目のスコア："+score+"</p>")
+            if (score > bestscore){
+                bestscore = score;
+                document.getElementById("best").innerHTML = bestscore;
+                $('#bestp').text("BESTスコア：" + bestscore);
+            }
+            score = 0;
+        },30000)
     $('#home').hide();
+    $('#button1').hide();
     for (var i = 1; i < 10; i++) {
         $("#live" + i).hide();
         $("#bomb" + i).hide();
@@ -40,9 +63,9 @@ function start(stnum) {
                 $("#bomb" + i).hide();
             }
             document.getElementById("score").innerHTML = score;
-        }, 900)
+        }, 1100)
         //    시간설정
-    }, 1000)
+    }, 1200)
 
 }
 
@@ -57,10 +80,11 @@ function level(num) {
 function home() {
     $('#gamemode').hide();
     $("#home").show();
+    $("#button2").show();
 }
 
 $('#bomb1').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom1");
@@ -71,7 +95,7 @@ $('#bomb1').click(function () {
     }, 400);
 });
 $('#bomb2').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom2");
@@ -82,7 +106,7 @@ $('#bomb2').click(function () {
     }, 400);
 });
 $('#bomb3').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom3");
@@ -93,7 +117,7 @@ $('#bomb3').click(function () {
     }, 400);
 });
 $('#bomb4').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom4");
@@ -104,7 +128,7 @@ $('#bomb4').click(function () {
     }, 400);
 });
 $('#bomb5').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom5");
@@ -115,7 +139,7 @@ $('#bomb5').click(function () {
     }, 400);
 });
 $('#bomb6').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom6");
@@ -126,7 +150,7 @@ $('#bomb6').click(function () {
     }, 400);
 });
 $('#bomb7').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom7");
@@ -137,7 +161,7 @@ $('#bomb7').click(function () {
     }, 400);
 });
 $('#bomb8').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom8");
@@ -148,7 +172,7 @@ $('#bomb8').click(function () {
     }, 400);
 });
 $('#bomb9').click(function () {
-    score -= 1;
+    score -= 10;
     var appear = document.getElementById("BOOM");
     appear.play();
     document.getElementById("boom9");
